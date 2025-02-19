@@ -6,7 +6,7 @@
 /*   By: gchauvot <gchauvot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:39:53 by gchauvot          #+#    #+#             */
-/*   Updated: 2025/02/17 16:20:30 by gchauvot         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:03:56 by gchauvot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap()
 	this->_Hp = 10;
 	this->_Ep = 10;
 	this->_Ad = 0;
-	std::cout << "P0"<<std::endl;
+	this->_Name = "CL4P";
 	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
 }
 

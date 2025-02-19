@@ -12,16 +12,21 @@
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 #include <iostream>
 
 
 int main( void )
 {
-	// ClapTrap uno("DOOMED");
-	ScavTrap una("DOOMED");
+	ClapTrap uno("CL4PTR4P");
+	ScavTrap una("SC4V");
+	FragTrap due("FR4G");
 	una.guardGate();
 	una.attack("VICTIME");
+	due.attack("HANDSOME JACK");
+	due.highFivesGuys();
+
 	std::cout << una.get_Hp()<<"\n";
 
 	return 0;

@@ -6,7 +6,7 @@
 /*   By: gchauvot <gchauvot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:28:10 by gchauvot          #+#    #+#             */
-/*   Updated: 2025/02/17 17:34:12 by gchauvot         ###   ########.fr       */
+/*   Updated: 2025/02/19 10:59:21 by gchauvot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 #include "FragTrap.hpp"
 
 // Constructors
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap("FR4GTR4P", 100, 100, 30)
 {
 	std::cout << "\e[0;33mDefault Constructor called of FragTrap\e[0m" << std::endl;
 }
 
 FragTrap::FragTrap(std::string Name) : ClapTrap(Name, 100, 100, 30)
 {
-	std::cout << "\e[0;33mName ScavTrap Constructor called of ScavTrap\e[0m" << std::endl;
+	std::cout << "\e[0;33mName ScavTrap Constructor called of FragTrap\e[0m" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &copy)
 {
-	(void) copy;
+	this->_Name = copy.get_Name();
+	this->_Hp = copy.get_Hp();
+	this->_Ep = copy.get_Ep();
+	this->_Ad = copy.get_Ad();
 	std::cout << "\e[0;33mCopy Constructor called of FragTrap\e[0m" << std::endl;
 }
 

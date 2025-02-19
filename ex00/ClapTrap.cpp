@@ -6,7 +6,7 @@
 /*   By: gchauvot <gchauvot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:39:53 by gchauvot          #+#    #+#             */
-/*   Updated: 2025/02/17 16:20:24 by gchauvot         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:04:29 by gchauvot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ClapTrap::ClapTrap()
 	this->_Hp = 10;
 	this->_Ep = 10;
 	this->_Ad = 1;
+	this->_Name = "CL4P";
 	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
 }
 
@@ -53,7 +54,10 @@ ClapTrap::~ClapTrap()
 // Operators
 ClapTrap & ClapTrap::operator=(const ClapTrap &assign)
 {
-	(void) assign;
+	this->_Ad = assign.get_Ad();
+	this->_Ep = assign.get_Ep();
+	this->_Hp = assign.get_Hp();
+	this->_Name = assign.get_Name();
 	return *this;
 }
 

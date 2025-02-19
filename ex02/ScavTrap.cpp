@@ -6,7 +6,7 @@
 /*   By: gchauvot <gchauvot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:39:53 by gchauvot          #+#    #+#             */
-/*   Updated: 2025/02/17 17:28:56 by gchauvot         ###   ########.fr       */
+/*   Updated: 2025/02/19 10:57:17 by gchauvot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(const ScavTrap &copy):ClapTrap(copy)
 	std::cout << "\e[0;33mCopy ScavTrap Constructor called of ScavTrap\e[0m" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name, 0, 50, 20)
+ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name, 100, 50, 20)
 {
 	this->_ggate = false;
 	std::cout << "\e[0;33mName ScavTrap Constructor called of ScavTrap\e[0m" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: gchauvot <gchauvot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:39:53 by gchauvot          #+#    #+#             */
-/*   Updated: 2025/02/17 16:20:30 by gchauvot         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:02:11 by gchauvot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ClapTrap::ClapTrap()
 	this->_Hp = 10;
 	this->_Ep = 10;
 	this->_Ad = 0;
+	this->_Name = "CL4P";
 	std::cout << "P0"<<std::endl;
 	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
 }
@@ -91,11 +92,11 @@ void ClapTrap::attack(const std::string &target)
 	if (this->_Ep > 0 && this->_Hp > 0)
 	{
 		this->_Ep--;
-		std::cout << "Claptrap "
+		std::cout << "\e[0;33m"
 			<< this->_Name
-			<< " attacks "
+			<< "\e[0m attacks \e[0;31m"
 			<< target
-			<< ", causing \e[0;31m"
+			<< "\e[0m, causing \e[0;31m"
 			<< this->get_Ad()
 			<<	"\e[0m points of damage!"
 			<< std::endl;

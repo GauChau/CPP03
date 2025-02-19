@@ -1,4 +1,4 @@
-OUT = ScavTrap
+OUT = FragTrap
 
 SRC = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 SRC_OBJS = $(SRC:.cpp=.o)
